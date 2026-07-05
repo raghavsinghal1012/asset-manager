@@ -16,7 +16,7 @@ from app.database import SessionLocal
 
 from app.services.asset_service import AssetService
 
-initialize_database()
+# initialize_database()
 
 app = FastAPI(
     title="Firm 1 Asset Manager"
