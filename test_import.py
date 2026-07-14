@@ -12,10 +12,10 @@ db = SessionLocal()
 
 importer = ExcelImporter(db)
 
-excel_path = Path("uploads/Book3.xlsx")
+excel_path = Path("uploads/Tata_sample.xlsx")
 
 assets = importer.import_workbook(
-    company="Firm1",
+    company="Tata",
     file_path=excel_path
 )
 
@@ -25,12 +25,12 @@ writer = ExcelWriter(
 
 writer.create_asset_excel(
     assets,
-    Path("generated/Book3_With_UUID.xlsx")
+    Path("generated/Tata_With_UUID.xlsx")
 )
 
 writer.create_mapping_excel(
     assets,
-    Path("generated/Book3_UUID_Mapping.xlsx")
+    Path("generated/Tata_UUID_Mapping.xlsx")
 )
 
 print(f"Imported {len(assets)} assets")
